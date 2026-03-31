@@ -210,21 +210,36 @@ export default function Portfolio() {
             <div className="lc-hero-grid">
               <div className="lc-hero-left">
                 <div className="lc-hero-badge">Texas · Remote / Hybrid Open</div>
-                <p className="lc-hero-label">IT & NETWORK PROFESSIONAL</p>
+                <p className="lc-hero-label">IT PROFESSIONAL & SYSTEMS ADMINISTRATOR</p>
                 <h1 className="lc-hero-h1">
                   Lavoisier<br /><span className="lc-gold">Cornerstone</span>
                 </h1>
                 <div className="lc-hero-divider" />
                 <p className="lc-hero-typed">{typed}<span className="lc-cursor">|</span></p>
                 <p className="lc-hero-sub">
-                  I'm known for clear communication and precise documentation of systems and
-                  procedures. I take building infrastructure that organizations can rely on very
-                  seriously — and I'm always actively adding to my technical toolkit.
+                  IT professional with hands-on experience in systems administration, cloud infrastructure, and network operations — demonstrated through a portfolio of deployed projects including a full-stack Cisco IOS simulator, Active Directory on Azure VMs, and full-lifecycle ITSM implementations using osTicket and ServiceNow.
                 </p>
                 <div className="lc-hero-btns">
                   <button onClick={() => scrollTo("projects")} className="lc-btn-primary">View Projects →</button>
                   <button onClick={() => scrollTo("contact")} className="lc-btn-outline">Get in Touch</button>
                   <a href="/resume.pdf" download="Lavoisier_Cornerstone_Resume.pdf" className="lc-btn-resume">Download Resume ↓</a>
+                </div>
+                <div style={{ display: "flex", gap: "28px", marginTop: "48px", marginBottom: "24px" }}>
+                  <a href="https://github.com/cornerstonian" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z" fill="#c9a96e"/>
+                    </svg>
+                  </a>
+                  <a href="https://www.linkedin.com/in/voiscornerstone/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M20.447 20.452H17.01v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.585V9h3.305v1.561h.046c.46-.872 1.584-1.791 3.26-1.791 3.488 0 4.132 2.296 4.132 5.28v6.402zM5.337 7.433a1.918 1.918 0 110-3.836 1.918 1.918 0 010 3.836zm1.67 13.019H3.667V9h3.34v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="#c9a96e"/>
+                    </svg>
+                  </a>
+                  <a href="mailto:vois.cornerstone@gmail.com" aria-label="Email">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M20 4H4C2.897 4 2 4.897 2 6v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2l-8 5-8-5h16zm0 12H4V8.868l8 5 8-5V18z" fill="#c9a96e"/>
+                    </svg>
+                  </a>
                 </div>
               </div>
               <div className="lc-hero-right">
@@ -394,7 +409,7 @@ export default function Portfolio() {
                   </div>
                   <div className="lc-contact-row">
                     <svg className="lc-contact-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                    <a href="https://linkedin.com/in/lavoisier-cornerstone" target="_blank" rel="noreferrer" className="lc-contact-link">linkedin.com/in/lavoisier-cornerstone</a>
+                    <a href="https://www.linkedin.com/in/voiscornerstone/" target="_blank" rel="noreferrer" className="lc-contact-link">linkedin.com/in/voiscornerstone</a>
                   </div>
                   <div className="lc-contact-row">
                     <svg className="lc-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8,21 12,17 16,21"/></svg>
@@ -482,7 +497,7 @@ const GLOBAL = `
   /* HERO */
   .lc-hero { position: relative; background: #2d5a3d; min-height: 100vh; display: flex; align-items: center; overflow: hidden; }
   .lc-hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(29,58,39,0.95) 0%, rgba(29,58,39,0.75) 100%); pointer-events: none; }
-  .lc-hero-content { position: relative; z-index: 2; width: 100%; max-width: 1100px; margin: 0 auto; padding: 120px 24px 80px; animation: fadeUp 0.8s ease both; }
+  .lc-hero-content { position: relative; z-index: 2; width: 100%; max-width: 1100px; margin: 0 auto; padding: 120px 24px 40px; animation: fadeUp 0.8s ease both; }
   .lc-hero-grid { display: grid; grid-template-columns: 1fr auto; gap: 60px; align-items: center; }
   .lc-hero-left { max-width: 580px; }
   .lc-hero-right { display: flex; align-items: center; justify-content: center; }
