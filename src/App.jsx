@@ -92,6 +92,8 @@ const PROJECTS = [
     status: "Active",
     statusColor: "#2d5a3d",
     desc: "Built an isolated practice network using a consumer router as a WAN buffer, simulating a real-world edge topology for safe lab segmentation. Configured a DHCP WAN interface on a Cisco 2600 router, verified end-to-end internet connectivity, and staged infrastructure for SSH remote management and switch integration.",
+    img: "/homelab.png",
+    imgAlt: "CCNA Physical Homelab — Cisco 2600, Catalyst switch, Raspberry Pi",
   },
   {
     name: "Active Directory — On-Premises Simulation in Azure",
@@ -274,8 +276,10 @@ export default function Portfolio() {
               <div className="lc-card">
                 <h3 className="lc-card-head">Background</h3>
                 <div className="lc-gold-rule" />
-                <p className="lc-card-text">IT professional with hands-on experience in systems administration, cloud infrastructure, and network operations — demonstrated through a portfolio of deployed projects including a full-stack Cisco IOS simulator, Active Directory on Azure VMs, network security group configuration, and full-lifecycle ITSM implementations using osTicket and ServiceNow.</p>
+                <blockquote className="lc-pullquote">"Precision and clarity are non-negotiable."</blockquote>
+                <p className="lc-card-text">What sets me apart isn't just the technical work — it's how I document it. Every project on my GitHub is built to be understood, repeated, and built upon. Currently pursuing CCNA, hands-on daily — building labs, configuring systems, and closing the gap between certification knowledge and real-world implementation.</p>
                 <p className="lc-card-text">CompTIA Security+ certified, AZ-900 certified, and actively pursuing CCNA. Known for precise documentation and clear technical communication — builds and validates infrastructure with a focus on reliability and clarity. Based in Houston, TX; targeting Systems Administrator and Network roles throughout Texas.</p>
+                <p className="lc-card-text">I read to stay sharp. <em>The Phoenix Project</em>, <em>The Unicorn Project</em>, and <em>Project Zero Trust</em> inform how I think about IT operations and security strategy inside real organizations.</p>
                 <p className="lc-van-jones">✦ Recognized by Van Jones in <a href="https://www.usatoday.com/story/tech/columnist/2014/11/26/van-jones-yeswecode-silicon-valley-diversity-nyc-web-development-project/70103542/" target="_blank" rel="noreferrer" className="lc-van-jones-link"><em>USA Today</em></a> for STEM mentorship and community advocacy.</p>
               </div>
               <div className="lc-card">
@@ -333,6 +337,7 @@ export default function Portfolio() {
                     <div className="lc-proj-body">
                       <div className="lc-gold-rule" />
                       <p className="lc-card-text">{p.desc}</p>
+                      {p.img && <img src={p.img} alt={p.imgAlt} style={{ width: "100%", borderRadius: "8px", marginTop: "12px", display: "block" }} />}
                       <div className="lc-proj-links">
                         {p.url && <a href={p.url} target="_blank" rel="noreferrer" className="lc-proj-link-btn">Live Site →</a>}
                         {p.github && <a href={p.github} target="_blank" rel="noreferrer" className="lc-proj-link-outline">GitHub →</a>}
@@ -395,7 +400,7 @@ export default function Portfolio() {
             <SectionHead num="05" title="Contact" />
             <div className="lc-contact-wrap">
               <div className="lc-card">
-                <h3 className="lc-card-head">Let's Connect</h3>
+                <h3 className="lc-card-head">Let's Build Something Reliable</h3>
                 <div className="lc-gold-rule" />
                 <p className="lc-card-text">Actively targeting Systems Administrator and Network roles throughout Texas. Open to remote and hybrid arrangements. If you're building a team or know of a strong fit, reach out.</p>
                 <div className="lc-contact-rows">
@@ -543,6 +548,7 @@ const GLOBAL = `
   .lc-van-jones { font-size: 0.78rem; color: #2d5a3d; font-style: italic; border-left: 2px solid #c9a96e; padding-left: 10px; margin-top: 4px; line-height: 1.6; }
   .lc-van-jones-link { color: #c9a96e; text-decoration: underline; text-underline-offset: 2px; }
   .lc-card-text { font-size: 0.87rem; line-height: 1.75; color: #555; margin-bottom: 12px; }
+  .lc-pullquote { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.15rem; color: #777; border-left: 3px solid #c9a96e; padding: 6px 0 6px 16px; margin: 0 0 18px 0; line-height: 1.5; }
   .lc-traj-row { display: flex; gap: 12px; margin-bottom: 10px; font-size: 0.83rem; }
   .lc-traj-label { color: #c9a96e; font-weight: 600; width: 58px; flex-shrink: 0; font-family: 'DM Mono', monospace; font-size: 0.73rem; padding-top: 1px; }
   .lc-traj-val { color: #3d3d3d; line-height: 1.5; }
