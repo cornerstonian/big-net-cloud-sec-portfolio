@@ -61,8 +61,8 @@ function NetworkCanvas() {
 }
 
 /* ── DATA ── */
-const ROLES = ["IT Professional & Systems Administrator", "Systems Administration", "Cloud Infrastructure", "Network Operations", "CCNA Candidate · Apr–May 2026"];
-const NAV = ["about", "certifications", "projects", "skills", "contact"];
+const ROLES = ["IT Professional & Systems Administrator", "Systems Administration", "Cloud Infrastructure", "Network Operations", "CCNA Candidate · Jun 2026"];
+const NAV = ["certifications", "projects", "skills"];
 
 const CERTS = [
   { badge: "SEC+", name: "CompTIA Security+", status: "Certified", color: "#2d5a3d" },
@@ -75,8 +75,8 @@ const CERTS = [
 const PROJECTS = [
   {
     name: "CCNA Command Center",
-    url: "https://ccna-command-center.vercel.app",
-    urlLabel: "ccna-command-center.vercel.app",
+    url: "https://commandcenter.lavoisier.dev",
+    urlLabel: "commandcenter.lavoisier.dev",
     github: "https://github.com/cornerstonian/ccna-command-center",
     tags: ["React", "Vite", "Supabase", "PostgreSQL", "Anthropic API", "Vercel"],
     status: "Live",
@@ -184,6 +184,8 @@ export default function Portfolio() {
                 {id}
               </button>
             ))}
+            <a href="https://blog.lavoisier.dev" target="_blank" rel="noopener noreferrer" className="lc-nav-btn lc-nav-ext">blog</a>
+            <a href="https://commandcenter.lavoisier.dev" target="_blank" rel="noopener noreferrer" className="lc-nav-btn lc-nav-ext">command center</a>
           </div>
           <button className="lc-hamburger" onClick={e => { e.stopPropagation(); setMenuOpen(o => !o); }}>
             <span className={`lc-ham-line${menuOpen ? " open" : ""}`} />
@@ -199,6 +201,8 @@ export default function Portfolio() {
                 {id}
               </button>
             ))}
+            <a href="https://blog.lavoisier.dev" target="_blank" rel="noopener noreferrer" className="lc-mobile-btn lc-nav-ext">blog</a>
+            <a href="https://commandcenter.lavoisier.dev" target="_blank" rel="noopener noreferrer" className="lc-mobile-btn lc-nav-ext">command center</a>
           </div>
         )}
       </nav>
@@ -418,7 +422,7 @@ export default function Portfolio() {
                   </div>
                   <div className="lc-contact-row">
                     <svg className="lc-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8,21 12,17 16,21"/></svg>
-                    <a href="https://ccna-command-center.vercel.app" target="_blank" rel="noreferrer" className="lc-contact-link">ccna-command-center.vercel.app</a>
+                    <a href="https://commandcenter.lavoisier.dev" target="_blank" rel="noreferrer" className="lc-contact-link">commandcenter.lavoisier.dev</a>
                   </div>
                 </div>
                 <a href="mailto:vois.cornerstone@gmail.com" className="lc-btn-primary" style={{ display: "inline-block" }}>Get in Touch →</a>
@@ -489,6 +493,7 @@ const GLOBAL = `
   .lc-nav-links { display: flex; gap: 4px; }
   .lc-nav-btn { background: none; border: none; font-family: 'DM Sans', sans-serif; font-size: 0.8rem; color: #666; cursor: pointer; padding: 6px 12px; border-radius: 4px; text-transform: lowercase; letter-spacing: 0.03em; transition: color 0.2s, background 0.2s; }
   .lc-nav-btn-on { color: #2d5a3d; background: rgba(45,90,61,0.07); font-weight: 500; }
+  .lc-nav-ext { text-decoration: none; display: inline-flex; align-items: center; }
   .lc-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
   .lc-ham-line { display: block; width: 22px; height: 2px; background: #1c3a27; border-radius: 2px; transition: transform 0.25s, opacity 0.25s; }
   .lc-ham-line.open:nth-child(1) { transform: translateY(7px) rotate(45deg); }
