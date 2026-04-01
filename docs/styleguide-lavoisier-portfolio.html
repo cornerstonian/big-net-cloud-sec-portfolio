@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Style Guide — lavoisier.dev</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --forest:  #2d5a3d;
+      --forest2: #1e3d2a;
+      --gold:    #c9a96e;
+      --gold2:   #a07830;
+      --cream:   #f5f0e8;
+      --cream2:  #ede6d6;
+      --text:    #2a2a2a;
+      --muted:   #6b6b6b;
+      --white:   #ffffff;
+      --border:  #d4c9b0;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--cream);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      line-height: 1.7;
+      padding: 3rem 2rem 6rem;
+    }
+
+    .wrapper { max-width: 900px; margin: 0 auto; }
+
+    /* Header */
+    .sg-header {
+      border-bottom: 2px solid var(--forest);
+      padding-bottom: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .sg-site-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold2);
+      margin-bottom: 0.4rem;
+    }
+
+    .sg-title {
+      font-family: 'Bodoni Moda', serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--forest);
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+
+    .sg-subtitle {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* Section headers */
+    .sg-section {
+      margin-bottom: 3rem;
+    }
+
+    .sg-section-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* Color swatches */
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 1rem;
+    }
+
+    .swatch {
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .swatch-color {
+      height: 72px;
+      width: 100%;
+    }
+
+    .swatch-info {
+      background: var(--white);
+      padding: 0.6rem 0.75rem;
+    }
+
+    .swatch-name {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+
+    .swatch-hex {
+      font-family: 'Courier New', monospace;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .swatch-role {
+      font-size: 10px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    /* Typography specimens */
+    .type-specimen {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .type-meta {
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .type-sample-bodoni-hero {
+      font-family: 'Bodoni Moda', serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.05;
+      background: var(--forest);
+      padding: 1.5rem;
+      border-radius: 4px;
+      margin-bottom: 0.5rem;
+    }
+
+    .type-sample-bodoni-h2 {
+      font-family: 'Bodoni Moda', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--forest);
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+
+    .type-sample-cormorant {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--gold2);
+      margin-bottom: 0.5rem;
+    }
+
+    .type-sample-dm {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .type-sample-dm-small {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold2);
+    }
+
+    /* Type scale table */
+    .type-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+    }
+
+    .type-table th {
+      background: var(--forest);
+      color: var(--cream);
+      padding: 0.5rem 0.75rem;
+      text-align: left;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .type-table td {
+      padding: 0.6rem 0.75rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+      vertical-align: middle;
+    }
+
+    .type-table tr:last-child td { border-bottom: none; }
+    .type-table tr:nth-child(even) td { background: var(--cream2); }
+
+    .mono { font-family: 'Courier New', monospace; }
+
+    /* Spacing scale */
+    .spacing-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .spacing-bar-wrap {
+      flex: 1;
+      background: var(--cream2);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      height: 20px;
+      overflow: hidden;
+    }
+
+    .spacing-bar {
+      height: 100%;
+      background: var(--forest);
+      opacity: 0.5;
+    }
+
+    .spacing-label {
+      font-family: 'Courier New', monospace;
+      font-size: 11px;
+      color: var(--muted);
+      min-width: 140px;
+    }
+
+    /* Component samples */
+    .component-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .component-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.25rem;
+    }
+
+    .component-label {
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+
+    /* Sample buttons */
+    .btn-primary {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--forest);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 10px 24px;
+      border-radius: 2px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-outline {
+      display: inline-block;
+      background: transparent;
+      color: var(--forest);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 9px 24px;
+      border-radius: 2px;
+      border: 1px solid var(--forest);
+      cursor: pointer;
+      margin-left: 0.5rem;
+    }
+
+    .btn-ghost {
+      display: inline-block;
+      background: transparent;
+      color: var(--gold2);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 9px 24px;
+      border-radius: 2px;
+      border: 1px solid var(--gold);
+      cursor: pointer;
+      margin-left: 0.5rem;
+    }
+
+    /* Sample cert badge */
+    .cert-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--forest2);
+      border: 1px solid var(--forest);
+      color: var(--cream);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+
+    .cert-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+
+    /* Nav sample */
+    .nav-sample {
+      background: var(--cream2);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      font-family: 'Bodoni Moda', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--forest);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+    }
+
+    .nav-links a.active {
+      color: var(--forest);
+      font-weight: 500;
+    }
+
+    /* Gradient sample */
+    .gradient-sample {
+      height: 60px;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+    }
+
+    .gradient-label {
+      font-family: 'Courier New', monospace;
+      font-size: 10px;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      .component-grid { grid-template-columns: 1fr; }
+      .color-grid { grid-template-columns: repeat(2, 1fr); }
+      .sg-title { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <div class="sg-header">
+    <div class="sg-site-label">Style Guide</div>
+    <h1 class="sg-title">lavoisier.dev</h1>
+    <p class="sg-subtitle">Portfolio site · React + Vite · Deployed on Vercel · Stack: Bodoni Moda / Cormorant Garamond / DM Sans</p>
+  </div>
+
+  <!-- COLORS -->
+  <div class="sg-section">
+    <div class="sg-section-title">Color Palette</div>
+    <div class="color-grid">
+      <div class="swatch">
+        <div class="swatch-color" style="background:#2d5a3d"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Forest Green</div>
+          <div class="swatch-hex">#2d5a3d</div>
+          <div class="swatch-role">Primary · Headers, nav, hero bg</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#1e3d2a"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Forest Dark</div>
+          <div class="swatch-hex">#1e3d2a</div>
+          <div class="swatch-role">Deep bg · Footer, section alt</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#c9a96e"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Warm Gold</div>
+          <div class="swatch-hex">#c9a96e</div>
+          <div class="swatch-role">Accent · CTAs, highlights</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#a07830"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Gold Dim</div>
+          <div class="swatch-hex">#a07830</div>
+          <div class="swatch-role">Secondary accent · Labels, badges</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#f5f0e8"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Cream</div>
+          <div class="swatch-hex">#f5f0e8</div>
+          <div class="swatch-role">Page background</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#ede6d6; border:1px solid #d4c9b0"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Cream Dark</div>
+          <div class="swatch-hex">#ede6d6</div>
+          <div class="swatch-role">Card / section alt bg</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#2a2a2a"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Near Black</div>
+          <div class="swatch-hex">#2a2a2a</div>
+          <div class="swatch-role">Body text</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#6b6b6b"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Muted</div>
+          <div class="swatch-hex">#6b6b6b</div>
+          <div class="swatch-role">Secondary text, captions</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GRADIENTS -->
+  <div class="sg-section">
+    <div class="sg-section-title">Gradients</div>
+    <div class="gradient-sample" style="background: linear-gradient(135deg, #2d5a3d 0%, #1e3d2a 100%)"></div>
+    <div class="gradient-label">Hero / Section BG — linear-gradient(135deg, #2d5a3d 0%, #1e3d2a 100%)</div>
+    <div class="gradient-sample" style="background: linear-gradient(135deg, #c9a96e 0%, #a07830 100%)"></div>
+    <div class="gradient-label">Gold Accent — linear-gradient(135deg, #c9a96e 0%, #a07830 100%)</div>
+    <div class="gradient-sample" style="background: linear-gradient(180deg, #f5f0e8 0%, #ede6d6 100%)"></div>
+    <div class="gradient-label">Cream Section — linear-gradient(180deg, #f5f0e8 0%, #ede6d6 100%)</div>
+  </div>
+
+  <!-- TYPOGRAPHY -->
+  <div class="sg-section">
+    <div class="sg-section-title">Typography</div>
+
+    <div class="type-specimen">
+      <div class="type-meta">Bodoni Moda · Hero / H1 · 700 · ~56–72px</div>
+      <div class="type-sample-bodoni-hero">Lavoisier<br>Cornerstone</div>
+    </div>
+
+    <div class="type-specimen">
+      <div class="type-meta">Bodoni Moda · H2 Section Title · 700 · 32px</div>
+      <div class="type-sample-bodoni-h2">Projects & Deployments</div>
+    </div>
+
+    <div class="type-specimen">
+      <div class="type-meta">Cormorant Garamond · Italic Accent · 400 · 22px</div>
+      <div class="type-sample-cormorant">IT Professional & Systems Administrator</div>
+    </div>
+
+    <div class="type-specimen">
+      <div class="type-meta">DM Sans · Body · 400 · 15–16px · line-height 1.7</div>
+      <div class="type-sample-dm">Hands-on experience in systems administration, cloud infrastructure, and network operations. Demonstrated through a portfolio of deployed projects including a full-stack Cisco IOS simulator, Active Directory on Azure VMs, and full-lifecycle ITSM implementations.</div>
+    </div>
+
+    <div class="type-specimen">
+      <div class="type-meta">DM Sans · Label / Badge · 500 · 11px · tracking 0.12em · uppercase</div>
+      <div class="type-sample-dm-small">CompTIA Security+ · AZ-900 · CCNA In Progress</div>
+    </div>
+
+    <br/>
+    <table class="type-table">
+      <thead>
+        <tr>
+          <th>Element</th>
+          <th>Font</th>
+          <th>Weight</th>
+          <th>Size</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Hero / Name</td><td class="mono">Bodoni Moda</td><td>700</td><td>56–72px</td><td>On dark green bg</td></tr>
+        <tr><td>H1 Section</td><td class="mono">Bodoni Moda</td><td>700</td><td>40–48px</td><td>Forest green color</td></tr>
+        <tr><td>H2 Sub-section</td><td class="mono">Bodoni Moda</td><td>700</td><td>28–32px</td><td></td></tr>
+        <tr><td>Italic Accent</td><td class="mono">Cormorant Garamond</td><td>400 italic</td><td>18–22px</td><td>Gold dim color</td></tr>
+        <tr><td>Body Copy</td><td class="mono">DM Sans</td><td>400</td><td>15–16px</td><td>Line-height 1.7</td></tr>
+        <tr><td>Nav Links</td><td class="mono">DM Sans</td><td>400</td><td>13px</td><td>Tracking 0.04em</td></tr>
+        <tr><td>Labels / Badges</td><td class="mono">DM Sans</td><td>500</td><td>10–11px</td><td>Uppercase, tracking 0.12em</td></tr>
+        <tr><td>Buttons</td><td class="mono">DM Sans</td><td>500</td><td>12px</td><td>Uppercase, tracking 0.08em</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SPACING -->
+  <div class="sg-section">
+    <div class="sg-section-title">Spacing Scale</div>
+    <div class="spacing-row"><div class="spacing-label">4px — xs</div><div class="spacing-bar-wrap"><div class="spacing-bar" style="width:4px"></div></div></div>
+    <div class="spacing-row"><div class="spacing-label">8px — sm</div><div class="spacing-bar-wrap"><div class="spacing-bar" style="width:8px"></div></div></div>
+    <div class="spacing-row"><div class="spacing-label">16px — md</div><div class="spacing-bar-wrap"><div class="spacing-bar" style="width:16px"></div></div></div>
+    <div class="spacing-row"><div class="spacing-label">24px — lg</div><div class="spacing-bar-wrap"><div class="spacing-bar" style="width:24px"></div></div></div>
+    <div class="spacing-row"><div class="spacing-label">32px — xl</div><div class="spacing-bar-wrap"><div class="spacing-bar" style="width:32px"></div></div></div>
+    <div class="spacing-row"><div class="spacing-label">48px — 2xl</div><div class="spacing-bar-wrap"><div class="spacing-bar" style="width:48px"></div></div></div>
+    <div class="spacing-row"><div class="spacing-label">64px — 3xl · Section gap</div><div class="spacing-bar-wrap"><div class="spacing-bar" style="width:64px"></div></div></div>
+    <div class="spacing-row"><div class="spacing-label">96px — 4xl · Hero padding</div><div class="spacing-bar-wrap"><div class="spacing-bar" style="width:96px"></div></div></div>
+  </div>
+
+  <!-- COMPONENTS -->
+  <div class="sg-section">
+    <div class="sg-section-title">Components</div>
+
+    <div class="component-grid">
+      <div class="component-card">
+        <div class="component-label">Navigation</div>
+        <div class="nav-sample">
+          <div class="nav-brand">Lavoisier Cornerstone</div>
+          <ul class="nav-links">
+            <li><a href="#" class="active">certifications</a></li>
+            <li><a href="#">projects</a></li>
+            <li><a href="#">blog</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="component-card">
+        <div class="component-label">Buttons</div>
+        <div style="display:flex; flex-wrap:wrap; gap:0.5rem; align-items:center;">
+          <button class="btn-primary">Download Resume</button>
+          <button class="btn-outline">View Projects</button>
+          <button class="btn-ghost">Contact</button>
+        </div>
+      </div>
+
+      <div class="component-card">
+        <div class="component-label">Cert / Skill Badges</div>
+        <div style="display:flex; flex-wrap:wrap; gap:0.5rem;">
+          <span class="cert-badge"><span class="cert-dot"></span>CompTIA Security+</span>
+          <span class="cert-badge"><span class="cert-dot"></span>AZ-900</span>
+          <span class="cert-badge"><span class="cert-dot"></span>CCNA In Progress</span>
+        </div>
+      </div>
+
+      <div class="component-card">
+        <div class="component-label">Border Radius</div>
+        <div style="display:flex; gap:1rem; align-items:center; flex-wrap:wrap;">
+          <div style="width:48px;height:48px;background:var(--forest);border-radius:2px"></div>
+          <span style="font-size:11px;color:var(--muted)">2px — Buttons</span>
+          <div style="width:48px;height:48px;background:var(--forest);border-radius:6px"></div>
+          <span style="font-size:11px;color:var(--muted)">6px — Cards</span>
+          <div style="width:48px;height:48px;background:var(--forest);border-radius:24px"></div>
+          <span style="font-size:11px;color:var(--muted)">24px — Badges</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DEPLOYMENT INFO -->
+  <div class="sg-section">
+    <div class="sg-section-title">Deployment & Tech</div>
+    <table class="type-table">
+      <thead><tr><th>Layer</th><th>Technology</th></tr></thead>
+      <tbody>
+        <tr><td>Framework</td><td class="mono">React 18 + Vite</td></tr>
+        <tr><td>Styling</td><td class="mono">CSS / Tailwind</td></tr>
+        <tr><td>Hosting</td><td class="mono">Vercel (Production)</td></tr>
+        <tr><td>DNS</td><td class="mono">Cloudflare — DNS only (grey cloud)</td></tr>
+        <tr><td>Domain</td><td class="mono">lavoisier.dev</td></tr>
+        <tr><td>Repo</td><td class="mono">cornerstonian/big-net-cloud-sec-portfolio</td></tr>
+        <tr><td>Deploy trigger</td><td class="mono">git push origin master → auto-deploy ~30s</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+</body>
+</html>
