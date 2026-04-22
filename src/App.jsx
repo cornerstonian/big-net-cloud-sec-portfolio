@@ -129,7 +129,7 @@ const PROJECTS = [
 
 const SKILLS = [
   { cat: "Networking", items: ["Cisco IOS (Physical Lab)", "Wireshark", "VLANs / 802.1Q Trunking", "STP / RSTP / PortFast / BPDU Guard", "OSPF · HSRP", "Subnetting / CIDR", "ACLs / DHCP Snooping", "Layer 3 Switching / SVIs"] },
-  { cat: "Cloud & Identity", items: ["Azure AD / Entra ID", "Windows Server", "Active Directory", "Microsoft Graph API", "OAuth 2.0", "AZ-900 Certified", "ServiceNow Flow Designer", "Azure VM / Resource Groups"] },
+  { cat: "Cloud & Identity", items: ["Azure AD / Entra ID", "Windows Server", "Active Directory", "OAuth 2.0", "AZ-900 Certified", "ServiceNow", "Azure VM / Resource Groups"] },
   { cat: "Security", items: ["CompTIA Security+", "Kali / Mint / Parrot Linux", "Network Hardening", "DHCP Snooping / BPDU Guard", "OSINT Tooling", "IAM / User Lifecycle Mgmt"] },
   { cat: "Dev & Tooling", items: ["React / Vite", "Supabase (Auth + RLS)", "Git / GitHub Workflows", "PowerShell", "VS Code", "Anthropic API", "CI/CD (GitHub + Vercel)"] },
 ];
